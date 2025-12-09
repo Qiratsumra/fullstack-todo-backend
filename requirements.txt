@@ -3,5 +3,4 @@ uvicorn[standard]==0.34.0
 sqlalchemy==2.0.36
 psycopg2-binary==2.9.10
 python-dotenv==1.0.1
-pywin32==311; 
-sys_platform == 'win32'
+pywin32==311; sys_platform == 'win32'
