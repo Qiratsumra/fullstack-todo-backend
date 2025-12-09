@@ -6,7 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from service import router as api_router
 from database import create_tables
 from logging_config import configure_logging
-
+from dotenv import load_dotenv
+load_dotenv()
 # Configure logging at the application startup
 configure_logging()
 logger = logging.getLogger("app")
@@ -30,7 +31,7 @@ app = FastAPI()
 # Add CORS middleware to the application
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,  # Use the parsed origins
+    allow_origins=["*"],  # Use the parsed origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

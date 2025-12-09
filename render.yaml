@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: your-app-name
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: postgresql://app_e5dm_user:Oj6Vh2dBNZSrtbRjJSCUZOUkojaz78g8@dpg-d4s5an24d50c73bl61s0-a.oregon-postgres.render.com/app_e5dm 
+        fromDatabase:
+          name: app_e5dm
+          property: connectionString
