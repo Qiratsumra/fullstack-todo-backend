@@ -15,7 +15,7 @@ DB_HOST = os.environ.get("DB_HOST", "localhost")
 DB_PORT = os.environ.get("DB_PORT", "5433") # Default to 5433
 
 # Construct the default DATABASE_URL using environment variables
-DEFAULT_DATABASE_URL = f"postgresql://postgres:{password}@{DB_HOST}:{DB_PORT}/app"
+DEFAULT_DATABASE_URL = f"postgresql://postgres:{password}@{DB_HOST}:{DB_PORT}/todo_phase3_backend"
 
 DATABASE_URL = os.environ.get(
     "SQLALCHEMY_DATABASE_URL", 
